@@ -2,7 +2,7 @@
 let name1 = "Abraham";
 let count1 = 0;
 for (let i = 0; i < name1.length; i++) {
-  if (name1[i] === "a" || name1[i] === "A") {
+  if (name1[i].toLowerCase === "a") {
     count1++;
   }
 }
@@ -32,7 +32,7 @@ console.log(bookString4); // Answer should be: Genesis, Exodus, Leviticus, Numbe
 let name5 = "Jerusalem";
 let count5 = 0;
 for (let m = 0; m < name5.length; m++) {
-  if ("AEIOUaeiou".includes(name5[m])) {
+  if ("aeiou".includes(name5[m])) {
     count5++;
   }
 }
