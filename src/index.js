@@ -1,235 +1,161 @@
-/**
- * Question 1
- * Given a variable color with a value "red", use a switch statement to set a variable feeling to "passionate" for "red", "calm" for "blue", and "neutral" for other colors.
- */
-let color = "red";
-let feeling;
-
-switch (color) {
-  case "red":
-    feeling = "passionate";
-    break;
-  case "blue":
-    feeling = "calm";
-    break;
-  default:
-    feeling = "neutral";
+// Question 1: Count the number of occurrences of the letter 'a' in the name "Abraham".
+let name1 = "Abraham";
+let count1 = 0;
+for (let i = 0; i < name1.length; i++) {
+  if (name1[i] === "a" || name1[i] === "A") {
+    count1++;
+  }
 }
+console.log(count1); // Answer should be: 3
 
-console.log(feeling);
-
-/**
- * Question 2
- * Using a switch statement, check the value of the variable day (e.g., "Monday"). Return "Working day" for weekdays and "Weekend" for Saturday and Sunday.
- */
-let day = "Monday";
-let dayType;
-
-switch (day) {
-  case "Monday":
-  case "Tuesday":
-  case "Wednesday":
-  case "Thursday":
-  case "Friday":
-    dayType = "Working day";
-    break;
-  case "Saturday":
-  case "Sunday":
-    dayType = "Weekend";
-    break;
-  default:
-    dayType = "Invalid day";
+// Question 2: Reverse the string "Moses"
+let name2 = "Moses";
+let reversedName2 = "";
+for (let j = name2.length - 1; j >= 0; j--) {
+  reversedName2 += name2[j];
 }
+console.log(reversedName2); // Answer should be: sesoM
 
-console.log(dayType);
-
-/**
- * Question 3
- * Given a variable score of 85, set a grade: "A" for 90 and above, "B" for 80-89, "C" for 70-79, "D" for 60-69, and "F" for below 60.
- */
-let score = 85;
-let grade;
-
-switch (true) {
-  case score >= 90:
-    grade = "A";
-    break;
-  case score >= 80:
-    grade = "B";
-    break;
-  case score >= 70:
-    grade = "C";
-    break;
-  case score >= 60:
-    grade = "D";
-    break;
-  default:
-    grade = "F";
+// Question 3: Sum the integers from 1 to 12 (the number of sons of Jacob).
+let sum3 = 0;
+for (let k = 1; k <= 12; k++) {
+  sum3 += k;
 }
+console.log(sum3); // Answer should be: 78
 
-console.log(grade);
+// Question 4: Create a string that contains the first 5 books of the Old Testament separated by a comma.
+let books4 = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"];
+let bookString4 = books4.join(", ");
+console.log(bookString4); // Answer should be: Genesis, Exodus, Leviticus, Numbers, Deuteronomy
 
-/**
- * Question 4
- * Use a switch statement to determine if the variable fruit is a "berry". Set "berry" for strawberries, blueberries, and raspberries. "Not a berry" for other fruits.
- */
-let fruit = "strawberries";
-let fruitType;
-
-switch (fruit) {
-  case "strawberries":
-  case "blueberries":
-  case "raspberries":
-    fruitType = "berry";
-    break;
-  default:
-    fruitType = "Not a berry";
+// Question 5: Count the number of vowels in the name "Jerusalem".
+let name5 = "Jerusalem";
+let count5 = 0;
+for (let m = 0; m < name5.length; m++) {
+  if ("AEIOUaeiou".includes(name5[m])) {
+    count5++;
+  }
 }
+console.log(count5); // Answer should be: 3
 
-console.log(fruitType);
-
-/**
- * Question 5
- * Check the value of the variable month (e.g., "January") and return which quarter of the year it belongs to.
- */
-let month = "January";
-let quarter;
-
-switch (month) {
-  case "January":
-  case "February":
-  case "March":
-    quarter = "Q1";
-    break;
-  case "April":
-  case "May":
-  case "June":
-    quarter = "Q2";
-    break;
-  case "July":
-  case "August":
-  case "September":
-    quarter = "Q3";
-    break;
-  case "October":
-  case "November":
-  case "December":
-    quarter = "Q4";
-    break;
-  default:
-    quarter = "Invalid month";
+// Question 6: Find the product of the numbers 1 to 5.
+let product6 = 1;
+for (let n = 1; n <= 5; n++) {
+  product6 *= n;
 }
+console.log(product6); // Answer should be: 120
 
-console.log(quarter);
+// Question 7: Create a string from an array that tells the story of David and Goliath.
+let story7 = ["David", "fought", "Goliath", "and", "won."];
+let storyString7 = story7.join(" ");
+console.log(storyString7); // Answer should be: David fought Goliath and won.
 
-/**
- * Question 6
- * Use a switch statement to determine if a number is "small", "medium", or "large". Consider numbers 1-3 as "small", 4-6 as "medium", and 7-9 as "large".
- */
-let number = 5;
-let size;
-
-switch (true) {
-  case number >= 1 && number <= 3:
-    size = "small";
-    break;
-  case number >= 4 && number <= 6:
-    size = "medium";
-    break;
-  case number >= 7 && number <= 9:
-    size = "large";
-    break;
-  default:
-    size = "Invalid number";
+// Question 8:let phrase8 = "In The Beginning";
+let phrase8 = "In The Beginnng";
+let acronym8 = "";
+let words8 = phrase8.split(" ");
+for (let p = 0; p < words8.length; p++) {
+  acronym8 += words8[p][0];
 }
+console.log(acronym8); // Answer should be: ITB
 
-console.log(size);
+// Question 9: Convert the string "Noah" to uppercase.
+let name9 = "Noah";
+let upperName9 = name9.toUpperCase();
+console.log(upperName9); // Answer should be: NOAH
 
-/**
- * Question 7
- * Determine the type of the variable pet (e.g., "dog"). Return "Canine" for a dog, "Feline" for a cat, and "Unknown" for other pets.
- */
-let pet = "dog";
-let petType;
-
-switch (pet) {
-  case "dog":
-    petType = "Canine";
-    break;
-  case "cat":
-    petType = "Feline";
-    break;
-  default:
-    petType = "Unknown";
+// Question 10: Find the length of the string "Revelation" without using the `.length` property.
+let name10 = "Revelation";
+let length10 = 0;
+for (let r = 0; name10[r] !== undefined; r++) {
+  length10++;
 }
+console.log(length10); // Answer should be: 9
 
-console.log(petType);
-
-/**
- * Question 8
- * Given a variable transportMode with a value like "car", return "Fast" for "plane", "Medium" for "car", and "Slow" for "bicycle".
- */
-let transportMode = "car";
-let speed;
-
-switch (transportMode) {
-  case "plane":
-    speed = "Fast";
-    break;
-  case "car":
-    speed = "Medium";
-    break;
-  case "bicycle":
-    speed = "Slow";
-    break;
-  default:
-    speed = "Unknown";
+// Question 11: Count the number of occurrences of the letter 'e' in the word "Jericho".
+let city11 = "Jericho";
+let count11 = 0;
+for (let s = 0; s < city11.length; s++) {
+  if (city11[s] === "e" || city11[s] === "E") {
+    count11++;
+  }
 }
+console.log(count11); // Answer should be: 1
 
-console.log(speed);
-
-/**
- * Question 9
- * For a variable direction with values like "N", determine the full direction name. "N" for "North", "S" for "South", etc.
- */
-let direction = "N";
-let fullDirection;
-
-switch (direction) {
-  case "N":
-    fullDirection = "North";
-    break;
-  case "S":
-    fullDirection = "South";
-    break;
-  case "E":
-    fullDirection = "East";
-    break;
-  case "W":
-    fullDirection = "West";
-    break;
-  default:
-    fullDirection = "Unknown direction";
+// Question 12: Reverse the string "Bethlehem
+let town12 = "Bethlehem";
+let reversedTown12 = "";
+for (let t = town12.length - 1; t >= 0; t--) {
+  reversedTown12 += town12[t];
 }
+console.log(reversedTown12); // Answer should be: mehtelhteB
 
-console.log(fullDirection);
-
-/**
- * Question 10
- * Determine the type of drink based on the variable drink. "Water" for "H2O", "Coffee" for "C8H10N4O2", and "Unknown" for other values.
- */
-let drink = "H2O";
-let drinkType;
-
-switch (drink) {
-  case "H2O":
-    drinkType = "Water";
-    break;
-  case "C8H10N4O2":
-    drinkType = "Coffee";
-    break;
-  default:
-    drinkType = "Unknown";
+// Question 13: Sum the integers from 1 to 40 (the number of days of Jesus' temptation).
+let sum13 = 0;
+for (let u = 1; u <= 40; u++) {
+  sum13 += u;
 }
+console.log(sum13); // Answer should be: 820
 
-console.log(drinkType);
+// Question 14: Concatenate the list of the Twelve Apostles into a single string separated by a comma.
+let apostles14 = [
+  "Peter",
+  "James",
+  "John",
+  "Andrew",
+  "Philip",
+  "Bartholomew",
+  "Matthew",
+  "Thomas",
+  "James",
+  "Thaddeus",
+  "Simon",
+  "Judas"
+];
+let apostlesString14 = apostles14.join(", ");
+console.log(apostlesString14); // Answer should be: Peter, James, John, Andrew, Philip, Bartholomew, Matthew, Thomas, James, Thaddeus, Simon, Judas
+
+// Question 15: Count the number of consonants in the name "Isaiah".
+
+let name15 = "Isaiah";
+let count15 = 0;
+for (let w = 0; w < name15.length; w++) {
+  if (!"AEIOUaeiou".includes(name15[w])) {
+    count15++;
+  }
+}
+console.log(count15); // Answer should be: 3
+
+// Question 16: Find the product of the numbers from 3 to 7.
+let product16 = 1;
+for (let x = 3; x <= 7; x++) {
+  product16 *= x;
+}
+console.log(product16); // Answer should be: 2520
+
+// Question 17: Create a string from an array that tells the story of Jonah and the Whale.
+let story17 = ["Jonah", "was", "swallowed", "by", "a", "whale."];
+let storyString17 = story17.join(" ");
+console.log(storyString17); // Answer should be: Jonah was swallowed by a whale.
+
+// Question 18: Create an acronym from the phrase "Garden Of Eden".
+let phrase18 = "Garden Of Eden";
+let acronym18 = "";
+let words18 = phrase18.split(" ");
+for (let z = 0; z < words18.length; z++) {
+  acronym18 += words18[z][0];
+}
+console.log(acronym18); // Answer should be: GOE
+
+// Question 19: Convert the string "Canaan" to lowercase.
+let name19 = "Canaan";
+let lowerName19 = name19.toLowerCase();
+console.log(lowerName19); // Answer should be: canaan
+
+// Question 20: Find the length of the string "Exodus" without using the `.length` property.
+let name20 = "Exodus";
+let length20 = 0;
+for (let bb = 0; name20[bb] !== undefined; bb++) {
+  length20++;
+}
+console.log(length20); // Answer should be: 6
