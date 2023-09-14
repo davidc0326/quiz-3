@@ -52,18 +52,33 @@ console.log("[Question #7]:", reversedName);
 
 // Question 8: Create a sentence by adding spaces to words
 const peaceBeUponYou = ["Peace", "be", "upon", "you"];
-const sentence = peaceBeUponYou.join(" ");
-console.log("[Question #8]:", sentence);
+let sentence = "";
+
+for (const word of peaceBeUponYou) {
+  sentence += word + " ";
+}
+
+console.log("[Question #8]:", sentence.trim());
 
 // Question 9: Print out every other element from the array
 const daysOfCreation = ["Day1", "Day2", "Day3", "Day4", "Day5", "Day6"];
-for (let i = 0; i < daysOfCreation.length; i += 2) {
-  console.log("[Question #9]:", daysOfCreation[i]);
+let isFirst = true;
+
+for (const day of daysOfCreation) {
+  if (!isFirst) {
+    console.log("[Question #9]:", day);
+  }
+  isFirst = !isFirst;
 }
 
 // Question 10: Concatenate all the strings in the array
 const attributesOfGod = ["Omnipotent", "Omnipresent", "Omniscient"];
-const concatenatedAttributes = attributesOfGod.join("");
+let concatenatedAttributes = "";
+
+for (const attribute of attributesOfGod) {
+  concatenatedAttributes += attribute;
+}
+
 console.log("[Question #10]:", concatenatedAttributes);
 
 // Question 11: Create a new array with only the numbers greater than 3
@@ -86,12 +101,13 @@ console.log("[Question #12]:", productOfAges);
 
 // Question 13: Replace 'Goliath' with 'David' in the array
 const combatants = ["Goliath", "Soldier1", "Soldier2"];
-for (let i = 0; i < combatants.length; i++) {
-  if (combatants[i] === "Goliath") {
-    combatants[i] = "David";
+
+for (let combatant of combatants) {
+  if (combatant === "Goliath") {
+    combatant = "David";
   }
+  console.log("[Question #13]:", combatant);
 }
-console.log("[Question #13]:", combatants);
 
 // Question 14: Print the square of each element in the array
 const squaresOfNumbers = [1, 2, 3, 4];
@@ -102,20 +118,24 @@ for (const number of squaresOfNumbers) {
 // Question 15: Count the number of vowels in the string
 const theWord = "Bible";
 let vowelCount = 0;
-const vowels = ["a", "e", "i", "o", "u"];
-for (const letter of theWord.toLowerCase()) {
-  if (vowels.includes(letter)) {
+
+for (const letter of theWord) {
+  if ("aeiou".includes(letter.toLowerCase())) {
     vowelCount++;
   }
 }
+
 console.log("[Question #15]:", vowelCount);
 
 // Question 16: Print the elements that are divisible by 5
-const numbersFromBible = [5, 10, 15, 20, 25];
-for (const number of numbersFromBible) {
-  console.log("[Question #16]:", number);
-}
 
+const numbersFromBible = [5, 10, 15, 20, 25];
+
+for (const number of numbersFromBible) {
+  if (number % 5 === 0) {
+    console.log("[Question #16]:", number);
+  }
+}
 // Question 17: Create a new string where the first letter of each word is capitalized
 const phrase = "in the beginning";
 const words = phrase.split(" ");
@@ -147,7 +167,14 @@ console.log("[Question #19]:", mannaCount);
 // Question 20: Create a new array by picking every 3rd element from the original array
 const theCommandments = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const everyThirdElement = [];
-for (let i = 2; i < theCommandments.length; i += 3) {
-  everyThirdElement.push(theCommandments[i]);
+
+let count = 0;
+
+for (const commandment of theCommandments) {
+  count++;
+  if (count % 3 === 0) {
+    everyThirdElement.push(commandment);
+  }
 }
+
 console.log("[Question #20]:", everyThirdElement);
