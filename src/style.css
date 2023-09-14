@@ -11,3 +11,48 @@ body {
 *::after {
   box-sizing: inherit;
 }
+
+Si deseas crear un contador en una página web utilizando solo HTML, CSS y JavaScript (no Java), aquí tienes un ejemplo sencillo:
+
+HTML: Crea un archivo HTML (por ejemplo, contador.html) y agrega el siguiente contenido:
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Contador</title>
+</head>
+<body>
+    <div class="contador">
+        <button id="incrementar">Incrementar</button>
+        <span id="valor">0</span>
+        <button id="decrementar">Decrementar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+/* CSS: Crea un archivo CSS (por ejemplo, estilos.css) y agrega estilos básicos:
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+} */
+
+.contador {
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#valor {
+    font-size: 24px;
+    margin: 0 10px;
+}
